@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Game Hub</title>
+    <style>
+        body { margin: 0; font-family: Arial, sans-serif; }
+        .navbar {
+            background: #333;
+            padding: 15px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+            font-size: 1.2em;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="/">🏠 Home</a>
+        <a href="{{ url_for('tic_tac_toe_mode') }}">🎮 Tic Tac Toe</a>
+    </div>
+</body>
+</html>

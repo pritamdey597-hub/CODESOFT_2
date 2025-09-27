@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tic Tac Toe - Select Mode</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #89f7fe, #66a6ff);
+            text-align: center;
+            margin: 0;
+        }
+        .navbar {
+            background: #333;
+            padding: 15px;
+            text-align: left;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+            font-size: 1.2em;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            margin-top: 100px;
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 30px;
+        }
+        .game-options a {
+            display: inline-block;
+            margin: 15px;
+            padding: 15px 30px;
+            font-size: 1.5em;
+            text-decoration: none;
+            color: white;
+            background: #007bff;
+            border-radius: 10px;
+            transition: background 0.3s;
+        }
+        .game-options a:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="/">🏠 Home</a>
+        <a href="{{ url_for('tic_tac_toe_mode') }}">🎮 Tic Tac Toe</a>
+    </div>
+
+    <div class="container">
+        <h1>Select Game Mode</h1>
+        <div class="game-options">
+            <a href="{{ url_for('start', selected_mode='friend') }}">👫 Play with Friend</a>
+            <a href="{{ url_for('start', selected_mode='computer') }}">🤖 Play with Computer</a>
+        </div>
+    </div>
+</body>
+</html>
